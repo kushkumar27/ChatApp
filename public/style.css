@@ -1,0 +1,352 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.chat {
+	text-align: center;
+	color: white;
+	font-size: 40px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	padding: 12px;
+	word-spacing: 5px;
+}
+.logo1 {
+	display: block;
+	margin: auto;
+	width: 9%;
+	height: 17%;
+	margin-bottom: -5%;
+	margin-left: 47%;
+}
+.hero {
+	height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(https://images.all-free-download.com/images/graphicthumb/tatra_mountains_in_winter_201341.jpg);
+	background-position: center;
+	background-size: cover;
+	/* position: absolute; */
+	overflow: hidden;
+}
+.form-box {
+	width: 380px;
+	height: 480px;
+	position: relative;
+	margin: 6% auto;
+	background: #fff;
+	padding: 5px;
+	border: 1px solid black;
+	overflow: hidden;
+}
+.button-box {
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 20px 9px lightblue;
+	border-radius: 30px;
+	/* border: 1px solid black; */
+}
+.toggle-btn {
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+}
+#btn {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: linear-gradient(to right, #ff105f, #ffad06);
+	border-radius: 30px;
+	transition: 0.5s;
+}
+
+/* .social-icon img {
+	width: 30px;
+	padding: 5px 15px 12px 10px;
+	border-radius: 20%;
+} */
+.input-grp {
+	top: 202px;
+	position: absolute;
+	width: 280px;
+	transition: 0.5s;
+}
+.input-field {
+	width: 100%;
+	padding: 10px 0;
+	margin-left: 41px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 1px solid #999;
+	border-top: 0px;
+	outline: none;
+	background: transparent;
+}
+.password {
+	width: 100%;
+	padding: 10px 0;
+	margin-left: 41px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 1px solid #999;
+	border-top: 0px;
+	outline: none;
+	background: transparent;
+}
+.checkbox {
+	margin: 29px 7px 33px 0px;
+	margin-left: 37px;
+}
+.log-btn {
+	width: 85%;
+	padding: 10px 30px;
+	/* margin: 17px 40px; */
+	display: block;
+	margin: auto;
+	margin-left: 40px;
+	cursor: pointer;
+	background: linear-gradient(to right, #ff105f, #ffad06);
+	border-radius: 30px;
+	transition: 0.5s;
+	outline: none;
+	border: 0px;
+}
+span {
+	color: #777;
+	font-size: 12px;
+	bottom: 68px;
+	position: absolute;
+	/* margin-left: 25px; */
+}
+#login {
+	left: 40px;
+}
+#register {
+	left: 450px;
+}
+.user-error {
+	color: red;
+	display: inline;
+	position: absolute;
+	top: 0;
+	margin-top: 20px;
+	margin-left: 43px;
+	font-size: 13px;
+}
+.pass-error {
+	color: red;
+	display: none;
+	position: absolute;
+	margin-top: 23%;
+	margin-left: 38%;
+	font-size: larger;
+}
+/* #regerror {
+	color: red;
+	display: none;
+} */
+.reg-user-error {
+	color: red;
+	display: none;
+	position: absolute;
+	margin-top: 5%;
+	margin-left: 32%;
+	font-size: 15px;
+}
+.foot-class-one {
+	text-align: center;
+	position: absolute;
+	font-size: large;
+	margin-top: 87%;
+	margin-left: 10%;
+}
+.foot-class-two {
+	text-align: center;
+	position: absolute;
+	font-size: large;
+	margin-top: 94%;
+	margin-left: 20%;
+}
+@media screen and (max-width: 1000px) {
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	.chat {
+		text-align: center;
+		color: white;
+		margin-top: 0px;
+		font-size: 25px;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+		word-spacing: 5px;
+	}
+	.logo1 {
+		display: block;
+		margin: auto;
+		width: 19%;
+		height: 17%;
+
+		margin-left: 42%;
+	}
+	.hero {
+		height: 100vh;
+		width: 100vw;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			url(https://images.all-free-download.com/images/graphicthumb/tatra_mountains_in_winter_201341.jpg);
+		background-position: center;
+		background-size: cover;
+	}
+	.form-box {
+		width: 100%;
+		height: 480px;
+		position: relative;
+		margin: 1% auto;
+		background: #fff;
+		padding: 5px;
+		border: 1px solid black;
+		overflow: hidden;
+	}
+	.button-box {
+		width: 220px;
+		margin: 35px auto;
+		position: relative;
+		box-shadow: 0 0 20px 9px lightblue;
+		border-radius: 30px;
+		/* border: 1px solid black; */
+	}
+	.toggle-btn {
+		padding: 10px 30px;
+		cursor: pointer;
+		background: transparent;
+		border: 0;
+		outline: none;
+		position: relative;
+	}
+	#btn {
+		top: 0;
+		left: 0;
+		position: absolute;
+		width: 110px;
+		height: 100%;
+		background: linear-gradient(to right, #ff105f, #ffad06);
+		border-radius: 30px;
+		transition: 0.5s;
+	}
+
+	/* .social-icon img {
+		width: 30px;
+		padding: 5px 15px 12px 10px;
+		border-radius: 20%;
+	} */
+	.input-grp {
+		top: 202px;
+		position: absolute;
+		width: 280px;
+		transition: 0.5s;
+	}
+	.input-field {
+		width: 100%;
+		padding: 10px 0;
+		margin-left: 0px;
+		border-left: 0px;
+		border-right: 0px;
+		border-bottom: 1px solid #999;
+		border-top: 0px;
+		outline: none;
+		background: transparent;
+	}
+	.password {
+		width: 100%;
+		padding: 10px 0;
+		margin-left: 0px;
+		margin-top: 10px;
+		margin-bottom: 0px;
+		border-left: 0px;
+		border-right: 0px;
+		border-bottom: 1px solid #999;
+		border-top: 0px;
+		outline: none;
+		background: transparent;
+	}
+	.checkbox {
+		margin: 29px 7px 33px 0px;
+		margin-left: 0px;
+	}
+	.log-btn {
+		width: 85%;
+		padding: 10px 30px;
+		/* margin: 17px 40px; */
+		display: block;
+		margin: auto;
+		/* margin-left: 35px; */
+		cursor: pointer;
+		background: linear-gradient(to right, #ff105f, #ffad06);
+		border-radius: 30px;
+		transition: 0.5s;
+		outline: none;
+		border: 0px;
+	}
+	span {
+		color: #777;
+		font-size: 12px;
+		bottom: 68px;
+		position: absolute;
+		/* margin-left: 25px; */
+	}
+	#login {
+		left: 40px;
+	}
+	#register {
+		left: 450px;
+	}
+	.user-error {
+		color: red;
+		display: inline;
+		position: absolute;
+		top: 0;
+
+		font-size: 13px;
+		margin-top: 23px;
+	}
+	.pass-error {
+		color: red;
+		display: none;
+		margin-top: 22%;
+		margin-left: 33%;
+		font-size: larger;
+	}
+	/* #regerror {
+		color: red;
+		display: none;
+	} */
+	.reg-user-error {
+		color: red;
+		display: none;
+		position: absolute;
+		top: 0;
+		margin-left: 25%;
+		font-size: 15px;
+	}
+}
+.foot-class-one {
+	text-align: center;
+	position: absolute;
+	font-size: large;
+	margin-top: 87%;
+	margin-left: 7%;
+}
+.foot-class-two {
+	text-align: center;
+	position: absolute;
+	font-size: large;
+	margin-top: 94%;
+	margin-left: 20%;
+}
