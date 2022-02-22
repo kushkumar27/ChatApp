@@ -22,7 +22,7 @@ mongoose.connect(
 
 }
 ).then(() => {
-    console.log("Connected");
+    console.log(" mongo Connected");
 }).catch(err => {
     console.log(err);
 });

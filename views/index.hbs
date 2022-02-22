@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <style>
-        
+  
 
+    <style>
         #message-list {
             margin: -29px 0px -31px 1px;
-            text-align: center;  
+            text-align: center;
             display: none;
-            
+
         }
-        .pop{
+
+        .pop {
             margin: -29px 0px -31px 1px;
         }
 
@@ -41,7 +42,7 @@
 
         .invalid:before {
             position: relative;
-           
+
             content: "✖";
         }
     </style>
@@ -64,29 +65,30 @@
                 <button type="button" class="toggle-btn" onclick="login()">Log In</button>
                 <button type="button" class="toggle-btn" onclick="register()">Register</button>
             </div>
-             <div class="pop">
-            <div id="message-list">
-                <h3>Password must contain the following:</h3>
-                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-                <p id="number" class="invalid">A <b>number</b></p>
-                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-               
+            <div class="pop">
+                <div id="message-list">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+
                 </div>
-               
-                
+
+
             </div>
-            
+
 
             <!-- this is the login form -->
 
 
             <form id="login" method="post" action="/login" class="input-grp">
-             <p id="errormsg" class="user-error">
-                  
+                <p id="errormsg" class="user-error">
+
                 </p>
                 <input type="text" name='name' class=" input-field" id="log-inp-use" placeholder="User ID" required>
-                <input type="password" name="password" class=" password" id="log-inp-pas" placeholder="Enter Password" required>
+                <input type="password" name="password" class=" password" id="log-inp-pas" placeholder="Enter Password"
+                    required>
                 <input type="checkbox" class="checkbox" required><span>Remember Password</span>
                 <button type="submit" class="log-btn">Log In</button>
 
@@ -95,7 +97,7 @@
             <!-- this is the register form -->
 
             <form id="register" method="post" action="/register" class="input-grp">
-            <p id="regerror">
+                <p id="regerror">
                 </p>
                 <input type="text" name="UserID" class=" input-field" id="reg-user" placeholder="User ID" required>
                 <input type="email" name="email" class=" input-field" placeholder="Enter email ID" required>
@@ -109,11 +111,11 @@
             </form>
 
             <div id="foot" class="foot-class-one">
-                    New User? Register Here
+                if you don't have any account then Register!
             </div>
 
 
-            
+
 
 
         </div>
@@ -141,14 +143,14 @@
         var regerror = document.getElementById('reg-user')
 
 
-        logUser.onfocus=function(){
-            popup.style.display='none';
+        logUser.onfocus = function () {
+            popup.style.display = 'none';
         }
-         logPass.onfocus=function(){
-            popup.style.display='none';
+        logPass.onfocus = function () {
+            popup.style.display = 'none';
         }
-          regerror.onfocus=function(){
-            regeer.style.display='none';
+        regerror.onfocus = function () {
+            regeer.style.display = 'none';
         }
 
 
@@ -156,15 +158,15 @@
 
         myInput.onfocus = function () {
             document.getElementById("message-list").style.display = "block";
-         //   {{!-- f.classList.remove('fotter-two')
-           // f.classList.add('fotter-two-twice') --}}
+            //   {{!-- f.classList.remove('fotter-two')
+            // f.classList.add('fotter-two-twice') --}}
         }
         // When the user clicks outside of the password field, hide the message box
         myInput.onblur = function () {
             document.getElementById("message-list").style.display = "none";
 
-         //   {{!-- f.classList.add('fotter-two')
-           // f.classList.remove('fotter-two-twice') --}}
+            //   {{!-- f.classList.add('fotter-two')
+            // f.classList.remove('fotter-two-twice') --}}
         }
 
         // When the user starts to type something inside the password field
@@ -208,11 +210,11 @@
                 length.classList.add("invalid");
             }
         }
-        
+
         function register() {
 
             regeer.style.display = 'block'
-            f.innerHTML = "Already Register?Login Here"
+            f.innerHTML = "Already Register?Then Login"
             f.classList.remove('foot-class-one')
             f.classList.add('foot-class-two')
             popup.style.display = 'none';
@@ -222,21 +224,28 @@
         }
         if (token == 404) {
 
+
+            swal("User not Found!", "Please Register Firstly", "error");
+
             popup.innerHTML = 'User Not Found Please Register Firstly';
             popup.style.display = 'block';
-             popup.classList.add('user-error')
-             popup.classList.remove('pass-error')
-
+            popup.classList.add('user-error')
+            popup.classList.remove('pass-error')
 
         }
         else if (token == 202) {
+
+             swal("Invalid Password", "Please re-enter Your Password!", "warning");
+
             popup.innerHTML = "Invalid Password";
-            popup.style.display='block';
+            popup.style.display = 'block';
             popup.classList.remove('user-error')
             popup.classList.add('pass-error')
-           
+
         }
         if (token == 101) {
+
+            swal("User Name already taken!", "please enter a valid user name", "info");
             regeer.innerHTML = "User Name Already Taken"
             regeer.style.display = 'block'
             regeer.classList.add('reg-user-error')
