@@ -135,7 +135,7 @@ app.get("/", (req, res) => {
 
 });
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 server.listen(port, function () {
     console.log(`Example app listening on http://localhost:${port}`)
 });
